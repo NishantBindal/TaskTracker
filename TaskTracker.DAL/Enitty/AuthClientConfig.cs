@@ -15,6 +15,5 @@ namespace TaskTracker.DAL.Enitty
         public string ConsumerSecret { get; set; }
         public string Salt { get; set; }
         public string Digest { get; set; }
-        public int UserName { get; set; }
     }
 }

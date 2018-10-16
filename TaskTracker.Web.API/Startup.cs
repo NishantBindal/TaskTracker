@@ -15,7 +15,7 @@ using TaskTracker.Contracts;
 using TaskTracker.DAL;
 using TaskTracker.DAL.Context;
 using TaskTracker.ProjectManagementServices;
-using TaskTracker.Service;
+//using TaskTracker.Service;
 using TaskTracker.Utility;
 
 namespace TaskTracker.Web.API

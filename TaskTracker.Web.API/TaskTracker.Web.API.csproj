@@ -26,7 +26,6 @@
   <ItemGroup>
     <ProjectReference Include="..\TaskTracker.DAL\TaskTracker.DAL.csproj" />
     <ProjectReference Include="..\TaskTracker.ProjectManagementServices\TaskTracker.ProjectManagementServices.csproj" />
-    <ProjectReference Include="..\TaskTracker.Service\TaskTracker.Service.csproj" />
     <ProjectReference Include="..\TaskTracker.Utility\TaskTracker.Utility.csproj" />
   </ItemGroup>
 

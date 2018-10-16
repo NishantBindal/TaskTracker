@@ -33,9 +33,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{86
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskTracker.Utility", "TaskTracker.Utility\TaskTracker.Utility.csproj", "{B2811263-5510-4E29-B329-24324DEA3EE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTracker.Service", "TaskTracker.Service\TaskTracker.Service.csproj", "{252B0738-5FFC-4203-A9A2-012A3B0B02DF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTracker.UtilitiesDotNetStandard", "TaskTracker.UtilitiesDotNetStandard\TaskTracker.UtilitiesDotNetStandard.csproj", "{7FD5306C-9A39-4B1B-B177-1432D2A1EB7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskTracker.UtilitiesDotNetStandard", "TaskTracker.UtilitiesDotNetStandard\TaskTracker.UtilitiesDotNetStandard.csproj", "{7FD5306C-9A39-4B1B-B177-1432D2A1EB7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,10 +81,6 @@ Global
 		{B2811263-5510-4E29-B329-24324DEA3EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2811263-5510-4E29-B329-24324DEA3EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2811263-5510-4E29-B329-24324DEA3EE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{252B0738-5FFC-4203-A9A2-012A3B0B02DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{252B0738-5FFC-4203-A9A2-012A3B0B02DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{252B0738-5FFC-4203-A9A2-012A3B0B02DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{252B0738-5FFC-4203-A9A2-012A3B0B02DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7FD5306C-9A39-4B1B-B177-1432D2A1EB7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7FD5306C-9A39-4B1B-B177-1432D2A1EB7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FD5306C-9A39-4B1B-B177-1432D2A1EB7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -106,7 +100,6 @@ Global
 		{6F950CF9-6721-4A89-9A67-5084EC36F3DC} = {7202C2A1-EB78-4CE6-AA6C-7CB4CAF7C1FB}
 		{1F4C428C-0A92-4F49-B0FB-F34583D4C4D9} = {24168A9A-1316-473B-9654-68B8EA024DEF}
 		{B2811263-5510-4E29-B329-24324DEA3EE1} = {7202C2A1-EB78-4CE6-AA6C-7CB4CAF7C1FB}
-		{252B0738-5FFC-4203-A9A2-012A3B0B02DF} = {86DA7A16-4F4E-4955-9EBA-28417A44AF4B}
 		{7FD5306C-9A39-4B1B-B177-1432D2A1EB7D} = {7202C2A1-EB78-4CE6-AA6C-7CB4CAF7C1FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
