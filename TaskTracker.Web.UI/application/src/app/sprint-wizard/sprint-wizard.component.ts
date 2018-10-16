@@ -64,6 +64,7 @@ export class SprintWizardComponent implements OnInit {
 
   SprintTimeline: Date[];
   TimelineEvents: MemberAvailability[] = [];
+  Dates: string[];
   MemberCollection: Observable<TeamMember[]>;
   Members: TeamMember[];
   SelectedMembers: TeamMember[] = [];
@@ -132,6 +133,7 @@ export class SprintWizardComponent implements OnInit {
       },
       this.ValidateSelectedMembers
     );
+    this.availabilityFormGroup = new FormGroup({});
   }
   ngOnInit() {
     this.Initialize().then(() => {
@@ -226,9 +228,13 @@ export class SprintWizardComponent implements OnInit {
       this.TimelineEvents.push(event);
       currentDate = currentDate.add(1, 'day');
     }
+    this.Dates = this.TimelineEvents.map(
+      a => `${a.Date.getDate()}_${a.Date.getMonth()}`
+    );
   }
 
   SetSelectedMembers() {
+    this.TeamAvailabilityModel = [];
     for (const member of this.SelectedMembers) {
       const events = _.cloneDeep(this.TimelineEvents);
       events.forEach(a => {
@@ -241,5 +247,31 @@ export class SprintWizardComponent implements OnInit {
     }
 
     this.logger.Debug(this.TeamAvailabilityModel);
+    this.SetTeamAvailabilityFormGroup();
+  }
+
+  SetTeamAvailabilityFormGroup() {
+    this.TeamAvailabilityModel.forEach(modelElement => {
+      modelElement.AvailabilityData.forEach(availability => {
+        if (availability.IsWeekend) {
+          return;
+        }
+        this.availabilityFormGroup.addControl(
+          `${modelElement.Member.ID}_${availability.Date.getDate()}`,
+          this.utility.CreateControl(
+            'Hours',
+            [
+              {
+                validator: Validators.required,
+                validatorName: ValidatorNames.required,
+                errorMessage: 'Hours Required'
+              }
+            ],
+            availability.AvailableHours
+          ).Control
+        );
+      });
+    });
+    this.logger.Debug(this.availabilityFormGroup);
   }
 }

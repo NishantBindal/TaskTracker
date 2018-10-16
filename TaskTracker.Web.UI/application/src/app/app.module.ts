@@ -10,6 +10,7 @@ import { SprintWizardComponent } from './sprint-wizard/sprint-wizard.component';
 import { SprintWizardStepDetailsComponent } from './sprint-wizard-step-details/sprint-wizard-step-details.component';
 import { SprintWizardStepTeamMembersComponent } from './sprint-wizard-step-team-members/sprint-wizard-step-team-members.component';
 import { EventTemplateComponent } from 'src/core/components/event-template/event-template.component';
+import { SprintWizardStepTeamAvaialabilityComponent } from './sprint-wizard-step-team-avaialability/sprint-wizard-step-team-avaialability.component';
 
 @NgModule({
   imports: [SharedModule, CoreModule],
@@ -22,7 +23,8 @@ import { EventTemplateComponent } from 'src/core/components/event-template/event
     SprintWizardComponent,
     SprintWizardStepDetailsComponent,
     SprintWizardStepTeamMembersComponent,
-    EventTemplateComponent
+    EventTemplateComponent,
+    SprintWizardStepTeamAvaialabilityComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

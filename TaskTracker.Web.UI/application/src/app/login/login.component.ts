@@ -17,12 +17,12 @@ export class LoginComponent implements OnInit {
   JiraURL = this.utility.CreateControl('Jira URL', [
     {
       validator: Validators.required,
-      validatorName: 'required',
+      validatorName: ValidatorNames.required,
       errorMessage: 'Jira URL is required'
     },
     {
       validator: Validators.maxLength(250),
-      validatorName: 'maxLength',
+      validatorName: ValidatorNames.maxLength,
       errorMessage: 'Jira URL cannot be more than 250 characters'
     }
   ]);
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   EmailAddress = this.utility.CreateControl('Email Address', [
     {
       validator: Validators.required,
-      validatorName: 'required',
+      validatorName: ValidatorNames.required,
       errorMessage: 'Email Address is required'
     },
     {
@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     },
     {
       validator: Validators.maxLength(250),
-      validatorName: 'maxLength',
+      validatorName: ValidatorNames.maxLength,
       errorMessage: 'EmailAddress cannot be more than 250 characters'
     }
   ]);
@@ -48,12 +48,12 @@ export class LoginComponent implements OnInit {
   Password = this.utility.CreateControl('Password', [
     {
       validator: Validators.required,
-      validatorName: 'required',
+      validatorName: ValidatorNames.required,
       errorMessage: 'Password is required'
     },
     {
       validator: Validators.maxLength(250),
-      validatorName: 'maxLength',
+      validatorName: ValidatorNames.maxLength,
       errorMessage: 'Password cannot be more than 250 characters'
     }
   ]);

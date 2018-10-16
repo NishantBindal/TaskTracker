@@ -13,7 +13,8 @@ import {
   MatStepperModule,
   MatDatepickerModule,
   MatChipsModule,
-  MatIconModule
+  MatIconModule,
+  MatTableModule
 } from '@angular/material';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { PlatformModule } from '@angular/cdk/platform';
@@ -36,7 +37,8 @@ import { ObserversModule } from '@angular/cdk/observers';
     MatStepperModule,
     MatDatepickerModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   exports: [
     MatAutocompleteModule,
@@ -55,7 +57,8 @@ import { ObserversModule } from '@angular/cdk/observers';
     MatStepperModule,
     MatDatepickerModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ]
 })
 export class MaterialDesignModule {}
