@@ -1,0 +1,21 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h2 class="font-weight-light">Boards</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="row">
+      <div class="board col-lg-3" *ngFor="let board of Boards">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title font-weight-light">{{board.Name}}</h4>
+            <img class="card-img-top p5" src="../../assets/images/projectavatar.svg" alt="Board Image">
+            <p>Description Text</p>
+            <button class="btn btn-sm btn-light full-width" mat-button routerLinkActive="router-link-active" (click)="OpenBoard(board.ID)">OPEN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

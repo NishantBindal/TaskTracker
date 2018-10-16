@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title font-weight-light">{{sprint.Name}}</h4>
+    <p>Description Text</p>
+    <div>Start Date - {{sprint.StartDate.toDateString()}}</div>
+    <div>End Date - {{sprint.EndDate.toDateString()}}</div>
+    <button class="btn btn-sm btn-light full-width" mat-button routerLinkActive="router-link-active" (click)="OpenSprint(sprint.ID)">DETAILS</button>
+  </div>
+</div>

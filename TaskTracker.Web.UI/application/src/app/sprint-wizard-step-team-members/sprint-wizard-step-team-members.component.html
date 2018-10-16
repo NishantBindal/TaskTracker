@@ -1,0 +1,24 @@
+<mat-step [stepControl]="teamDetailsFormGroup" label="Team Members">
+  <form [formGroup]="teamDetailsFormGroup">
+    <div class=" row">
+      <mat-form-field class="col-lg-6">
+        <mat-chip-list #chipList>
+          <mat-chip *ngFor="let member of SelectedMembers" [selectable]="true" [removable]="true" (removed)="DeselectMember(member)">
+            {{member.Name}}
+            <mat-icon matChipRemove>cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+        <mat-label>{{TeamMemberSelector.LabelName}}</mat-label>
+        <input matInput #memberInput formControlName="TeamMemberSelector" [matAutocomplete]="auto" [matChipInputFor]="chipList"
+          [matChipInputSeparatorKeyCodes]="SeparatorKeysCodes">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="DisplayMemberName"
+          (optionSelected)="OptionSelected($event)">
+          <mat-option *ngFor="let member of MemberCollection | async" [value]="member">
+            <span>{{member.Name}}</span>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <button mat-button class="btn btn-sm btn-primary" [disabled]="!teamDetailsFormGroup.valid" matStepperNext type="submit">NEXT</button>
+  </form>
+</mat-step>

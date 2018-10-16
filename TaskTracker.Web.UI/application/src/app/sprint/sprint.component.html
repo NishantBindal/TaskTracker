@@ -1,0 +1,63 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h2 class="font-weight-light">Sprints</h2>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a class="card-link" [routerLink]="['/boards']">Boards</a>
+      </li>
+      <li class="breadcrumb-item">Sprints</li>
+    </ul>
+
+    <mat-accordion>
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header class="bg-white">
+          Current
+        </mat-expansion-panel-header>
+        <div class="row">
+          <div class="col-lg-12" *ngFor="let sprint of CurrentSprints">
+            <app-sprint-template [sprint]=sprint></app-sprint-template>
+          </div>
+        </div>
+        <mat-action-row><button class="pull-right btn btn-sm btn-primary" mat-button (click)="OpenNewSprintWizard()">New
+            Sprint</button></mat-action-row>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngIf="UpcomingSprints">
+        <mat-expansion-panel-header class="bg-white">
+          Upcoming
+        </mat-expansion-panel-header>
+        <div class="row">
+          <div class="col-lg-6" *ngFor="let sprint of UpcomingSprints">
+            <app-sprint-template [sprint]=sprint></app-sprint-template>
+          </div>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngIf="IncompleteSprints">
+        <mat-expansion-panel-header class="bg-white">
+          <mat-panel-title>
+            Incomplete
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="row">
+          <div class="col-lg-6" *ngFor="let sprint of IncompleteSprints">
+            <app-sprint-template [sprint]=sprint></app-sprint-template>
+          </div>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngIf="CompleteSprints">
+        <mat-expansion-panel-header class="bg-white">
+          Completed
+        </mat-expansion-panel-header>
+        <div class="row">
+          <div class="col-lg-6" *ngFor="let sprint of CompleteSprints">
+            <app-sprint-template [sprint]=sprint></app-sprint-template>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>

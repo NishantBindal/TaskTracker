@@ -1,0 +1,6 @@
+namespace TaskTracker.Auth.Areas.HelpPage.ModelDescriptions
+{
+    public class DictionaryModelDescription : KeyValuePairModelDescription
+    {
+    }
+}

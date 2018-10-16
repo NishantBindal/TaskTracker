@@ -1,0 +1,7 @@
+/.vs
+/node_modules
+/published_web
+/packages
+*/bin
+*/obj
+*.csproj.user

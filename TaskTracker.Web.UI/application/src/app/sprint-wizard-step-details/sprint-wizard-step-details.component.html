@@ -1,0 +1,28 @@
+<mat-step [stepControl]="sprintDetailsFormGroup" label="Sprint Name & Timelines">
+  <form [formGroup]="sprintDetailsFormGroup">
+    <div class="row">
+      <mat-form-field class="col-lg-4">
+        <mat-label>{{SprintName.LabelName}}</mat-label>
+        <input matInput formControlName="SprintName">
+        <mat-error>{{SprintName.ErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-lg-4">
+        <input matInput [matDatepicker]="startDate" [matDatepickerFilter]="dateFilter" placeholder="{{SprintStartDate.LabelName}}"
+          formControlName="SprintStartDate">
+        <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+        <mat-datepicker #startDate></mat-datepicker>
+        <mat-error>{{SprintStartDate.ErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-lg-4">
+        <input matInput [matDatepicker]="endDate" [matDatepickerFilter]="dateFilter" placeholder="{{SprintEndDate.LabelName}}"
+          formControlName="SprintEndDate">
+        <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
+        <mat-datepicker #endDate></mat-datepicker>
+        <mat-error>{{SprintEndDate.ErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <button mat-button class="btn btn-sm btn-primary" [disabled]="!sprintDetailsFormGroup.valid" matStepperNext>NEXT</button>
+  </form>
+</mat-step>
